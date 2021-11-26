@@ -9,6 +9,7 @@ import java.util.List;
 
 public class SpeakerServiceImpl implements SpeakerService {
 
+    @Autowired
     private SpeakerRepository repository;
 
     public SpeakerServiceImpl() {
@@ -25,7 +26,6 @@ public class SpeakerServiceImpl implements SpeakerService {
         return repository.findAll();
     }
 
-    @Autowired
     public void setRepository(SpeakerRepository repository) {
         System.out.println("SpeakerServiceImpl setter");
         this.repository = repository;
