@@ -15,6 +15,7 @@ public class SpeakerServiceImpl implements SpeakerService {
         System.out.println("SpeakerServiceImpl no args constructor");
     }
 
+    @Autowired
     public SpeakerServiceImpl(SpeakerRepository speakerRepository){
         System.out.println("SpeakerServiceImpl RepositoryConstructor with argument");
         this.repository = speakerRepository;
@@ -25,9 +26,8 @@ public class SpeakerServiceImpl implements SpeakerService {
         return repository.findAll();
     }
 
-    @Autowired
-    public void setRepository(SpeakerRepository repository) {
-        System.out.println("SpeakerServiceImpl setter");
-        this.repository = repository;
-    }
+//    public void setRepository(SpeakerRepository repository) {
+//        System.out.println("SpeakerServiceImpl setter");
+//        this.repository = repository;
+//    }
 }
